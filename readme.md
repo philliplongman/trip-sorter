@@ -6,12 +6,14 @@ Given an array of arrays—which contain a departure and arrival city—in no pa
 
 That is, given
 
-  [
-    ["CHI", "NYC"],
-    ["BOS", "CHI"],
-    ["BEJ", "LON"],
-    ["NYC", "BEJ"]
-  ]
+```
+[
+  ["CHI", "NYC"],
+  ["BOS", "CHI"],
+  ["BEJ", "LON"],
+  ["NYC", "BEJ"]
+]
+```
 
 the result should be
 
