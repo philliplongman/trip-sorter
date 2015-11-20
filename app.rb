@@ -1,5 +1,3 @@
-require "pry"
-
 require_relative "flight"
 require_relative "trip"
 
@@ -11,4 +9,4 @@ FLIGHTS = [
 ]
 
 illogical_trip = Trip.new(FLIGHTS)
-illogical_trip.flights
+illogical_trip.itinerary

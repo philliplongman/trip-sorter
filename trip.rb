@@ -16,7 +16,9 @@ class Trip
   end
 
   def itinerary
-    # Return an array of the cities visited in the trip
+    flights.each_with_object [origin] do |flight, array|
+      array << flight.arrive
+    end
   end
 
   private
