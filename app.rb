@@ -11,5 +11,4 @@ FLIGHTS = [
 ]
 
 illogical_trip = Trip.new(FLIGHTS)
-binding.pry
-puts
+illogical_trip.flights
