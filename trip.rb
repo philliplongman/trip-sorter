@@ -24,7 +24,7 @@ class Trip
   attr_writer :flights
 
   def build_flights(array)
-    array.map { |e| Flight.new(e.first, e.last) }
+    array.map { |subarray| Flight.new(*subarray) }
   end
 
   def sort_flights
