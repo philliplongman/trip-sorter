@@ -16,9 +16,7 @@ class Trip
   end
 
   def itinerary
-    flights.each_with_object [origin] do |flight, array|
-      array << flight.arrive
-    end
+    @itinerary ||= flights.map(&:arrive).unshift(origin)
   end
 
   private
@@ -35,8 +33,8 @@ class Trip
 
   def connect_flights
     unsorted_flights.each do |flight|
-      flights.push(flight) if flights.empty? || flight.depart == destination
-      flights.unshift(flight) if flight.arrive == origin
+      flights.push flight if flights.empty? || flight.depart == destination
+      flights.unshift flight if flight.arrive == origin
     end
   end
 end
